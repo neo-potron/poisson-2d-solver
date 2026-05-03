@@ -1,7 +1,5 @@
 # Poisson 2D Solver – Numerical Methods
 
----
-
 ## Physics
 
 The solver tackles the generalized Poisson equation in electrostatics:
@@ -9,8 +7,6 @@ The solver tackles the generalized Poisson equation in electrostatics:
 $$-\nabla \cdot \left[\varepsilon_r(\mathbf{r})\, \nabla V(\mathbf{r})\right] = \frac{\rho(\mathbf{r})}{\varepsilon_0}$$
 
 The domain Ω = [0,1]² models a **2D parallel-plate capacitor**: two finite charge lines of opposite signs, discretized on a uniform N×N grid with homogeneous Dirichlet boundary conditions (V = 0 on ∂Ω).
-
----
 
 ## Features
 
