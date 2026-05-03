@@ -23,8 +23,6 @@ The domain Ω = [0,1]² models a **2D parallel-plate capacitor**: two finite cha
 - **SOR optimization** — empirical sweep over ω ∈ [1.2, 1.95]
 - **Heterogeneous dielectric extension** — arithmetic averaging of ε_r at interfaces
 
----
-
 ## Results
 
 ### Electrostatic Potential V(x,y)
@@ -45,8 +43,6 @@ The domain Ω = [0,1]² models a **2D parallel-plate capacitor**: two finite cha
 <p align="center">
   <img src="figures/norme_champ.png" width="60%" alt="Electric field norm"/>
 </p>
-
----
 
 ## Benchmarks
 
@@ -75,8 +71,6 @@ The domain Ω = [0,1]² models a **2D parallel-plate capacitor**: two finite cha
 
 Direct methods achieve machine precision (~10⁻¹⁵). Iterative methods converge to their tolerance (10⁻⁵), sufficient for numerical physics and independent of N — a sign of discretization robustness.
 
----
-
 ## Iterative Convergence
 
 <p align="center">
@@ -84,8 +78,6 @@ Direct methods achieve machine precision (~10⁻¹⁵). Iterative methods conver
 </p>
 
 Convergence is linear in the asymptotic regime. SOR with optimal ω reduces the spectral radius from 1 − O(1/N) (Gauss-Seidel) to 1 − O(π/N), yielding an N/π speedup in iteration count.
-
----
 
 ## SOR Parameter Optimization
 
@@ -95,8 +87,6 @@ Convergence is linear in the asymptotic regime. SOR with optimal ω reduces the 
 
 Empirical optimum: **ω* ≈ 1.90**, consistent with the theoretical value ω* = 2/(1 + sin(π/66)) ≈ 1.86.
 
----
-
 ## Spatial Error Analysis
 
 <p align="center">
@@ -104,8 +94,6 @@ Empirical optimum: **ω* ≈ 1.90**, consistent with the theoretical value ω* =
 </p>
 
 The absolute error map |V_direct − V_SOR| peaks near the charge sources. The near-perfect collinearity with y = x confirms the absence of systematic bias in the iterative solution.
-
----
 
 ## Heterogeneous Dielectric Extension
 
@@ -118,7 +106,6 @@ A dielectric block (ε_r = 50, typical of BaTiO₃ ceramic) is placed at x ∈ [
 
 Three physical effects are observed: field line refraction at the interface, potential screening (|E| reduced by ~ε_r inside), and bound charge accumulation at permittivity gradients.
 
----
 
 ## Project Structure
 
@@ -144,7 +131,3 @@ python main.py
 - numpy
 - scipy
 - matplotlib
-=======
-# poisson-2d-solver
-Finite-difference solver for the 2D Poisson equation in Python. Benchmarks six algorithms (Dense, Sparse, Jacobi, Gauss-Seidel, SOR, Conjugate Gradient) on runtime and precision. Includes SOR parameter optimization and extension to heterogeneous dielectric media.
->>>>>>> 2af4dd5a52767001ff59cd6873afeb1b353a778f
