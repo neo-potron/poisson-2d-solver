@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Poisson 2D Solver – Numerical Methods
 
 ---
